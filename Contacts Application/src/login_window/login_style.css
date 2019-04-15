@@ -1,0 +1,19 @@
+/*Apply CSS using -fx-property-...... :  .....   ;    */
+
+#header{
+    -fx-font-size: 40px;
+    -fx-text-alignment: center;
+    -fx-text-trf: uppercase;
+}
+
+.button{
+    -fx-background-color: #222222;
+    -fx-padding: 5 5 5 5;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.root{
+    -fx-background-color: rgba(243,32,0,0.7);
+}
+
