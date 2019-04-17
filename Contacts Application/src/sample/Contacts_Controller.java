@@ -1,7 +1,9 @@
 package sample;
 
+import authentication.User_Authentication;
 import dataModel.ContactDataModel;
 import dataModel.ContactsDataSource;
+import database.Connect_to_DB;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,9 +52,8 @@ public class Contacts_Controller {
 //        contacts.add(new Contact("Tim","Buchalka","876947332","timbuchalka@gmail.com"));
 //        contacts.add(new Contact("Andrew","Milton","787765445","milton34@gmail.com"));
 
-        dataSource.open();
         dataSource.createTableContact();
-        for (ContactDataModel contact:dataSource.queryContact()){
+        for (ContactDataModel contact:dataSource.queryContact(User_Authentication.uid)){
             contacts.add(contact);
         }
 
@@ -161,7 +162,10 @@ public class Contacts_Controller {
             DialogController dialogController=fxmlLoader.getController();
             ContactDataModel contact=dialogController.getNewData();
             contacts.add(contact);
-            dataSource.insertData(contact.getF_name(),contact.getL_name(),contact.getM_no(),contact.getEmail());
+            if (User_Authentication.uid!=-1){
+
+                dataSource.insertData(contact.getF_name(),contact.getL_name(),contact.getM_no(),contact.getEmail(),User_Authentication.uid);
+            }
             table.setItems(contacts);
             fName.setSortType(TableColumn.SortType.ASCENDING);
         }

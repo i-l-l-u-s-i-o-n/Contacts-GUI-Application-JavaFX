@@ -11,13 +11,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        Scene scene=new Scene(root, 500, 500);
+        Scene scene=new Scene(root, 800, 400);
 //        scene.setUserAgentStylesheet("shivam/app.css");
 //        scene.getStylesheets().add(getClass().getResource("login_style.css").toExternalForm());
 
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
+//        primaryStage.setResizable(false);
         primaryStage.show();
     }
 

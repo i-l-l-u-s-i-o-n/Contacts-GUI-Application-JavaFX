@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -21,7 +22,7 @@ import java.io.IOException;
 
 // It is the class where we implement our business logic.
 
-public class Controller {
+public class Login_Controller {
 
     // This annotation is used to refer a element of fxml file.
     @FXML
@@ -32,13 +33,15 @@ public class Controller {
     private PasswordField upass;
     @FXML
     private Button signup;
+    @FXML
+    private Label error;
 
 
 
 
 
     @FXML
-    public void showLoginWindow(ActionEvent event){
+    public void handelLoginClick(ActionEvent event){
 
         String name=uname.getText();
         String pass=upass.getText();
@@ -61,9 +64,26 @@ public class Controller {
             catch (IOException e) {
                 e.printStackTrace();
             }
+        }else {
+            error.setText("Invalid Credentials ! Try again .");
         }
+    }
 
-
+    @FXML
+    public void handelSignupClick(ActionEvent event){
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("signup_window/signup.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Signup");
+            stage.setScene(new Scene(root, 500, 500));
+            stage.show();
+            // Hide this current window (if this is what you want)
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
