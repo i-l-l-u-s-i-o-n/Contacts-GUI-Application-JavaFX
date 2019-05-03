@@ -6,16 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="773.0" stylesheets="@login_style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_window.Login_Controller">
+<AnchorPane fx:id="body" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="762.0" stylesheets="@login_style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login_window.Login_Controller">
     <children>
-        <Label fx:id="header" layoutX="233.0" prefHeight="58.0" prefWidth="435.0" text="Log In to CONTATCS">
-         </Label>
-        <Label fx:id="name" layoutX="284.0" layoutY="124.0" prefHeight="39.0" prefWidth="88.0" text="Username : " />
-        <Label fx:id="pass" layoutX="284.0" layoutY="187.0" prefHeight="28.0" prefWidth="60.0" text="Password : " />
-        <TextField fx:id="uname" layoutX="270.0" layoutY="131.0" prefHeight="25.0" prefWidth="204.0" />
-        <PasswordField fx:id="upass" layoutX="270.0" layoutY="188.0" prefHeight="25.0" prefWidth="204.0" />
-        <Button fx:id="login" layoutX="266.0" layoutY="298.0" mnemonicParsing="false" onAction="#handelLoginClick" prefHeight="25.0" prefWidth="96.0" text="LogIn" />
-        <Button fx:id="signup" layoutX="376.0" layoutY="298.0" mnemonicParsing="false" onAction="#handelSignupClick" prefHeight="25.0" prefWidth="88.0" text="SignUp" />
-      <Label fx:id="error" layoutX="280.0" layoutY="228.0" prefHeight="39.0" prefWidth="172.0" />
+        <TextField fx:id="uname" layoutX="295.0" layoutY="167.0" prefHeight="25.0" prefWidth="204.0" promptText="Username : " focusTraversable="false" />
+        <PasswordField fx:id="upass" layoutX="295.0" layoutY="212.0" prefHeight="25.0" prefWidth="204.0" promptText="Password : " focusTraversable="false" />
+        <Button fx:id="login" layoutX="295.0" layoutY="264.0" mnemonicParsing="false" onAction="#handelLoginClick" prefHeight="25.0" prefWidth="96.0" text="LogIn" />
+        <Button fx:id="signup" layoutX="411.0" layoutY="264.0" mnemonicParsing="false" onAction="#handelSignupClick" prefHeight="25.0" prefWidth="88.0" text="SignUp" />
+      <Label fx:id="error" layoutX="311.0" layoutY="306.0" prefHeight="39.0" prefWidth="172.0" />
     </children>
 </AnchorPane>

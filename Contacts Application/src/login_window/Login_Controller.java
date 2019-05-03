@@ -73,22 +73,17 @@ public class Login_Controller {
     public void handelSignupClick(ActionEvent event){
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("signup_window/signup.fxml"));
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("signup_window/signup_win.fxml"));
             Stage stage = new Stage();
             stage.setTitle("Signup");
-            stage.setScene(new Scene(root, 500, 500));
+            stage.setScene(new Scene(root, 800, 400));
             stage.show();
             // Hide this current window (if this is what you want)
+            //((Node)(event.getSource())).getScene().getWindow().hide();
             ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         catch (IOException e) {
             e.printStackTrace();
         }
     }
-
-
-
-
-
-
 }

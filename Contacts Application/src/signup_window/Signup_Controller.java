@@ -1,12 +1,20 @@
 package signup_window;
 
 import authentication.User_Authentication;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 /**
  * created by Shivam on 15-04-2019.
@@ -26,15 +34,10 @@ public class Signup_Controller {
     @FXML
     private ImageView image;
 
-    @FXML
-    public void initialize(){
-        Image img=new Image("https://service.mycontacts-app.com/contacts/static/img/start_page_image.png");
-//        Image img=new Image("signup_window/image/contact2.png");
-        image.setImage(img);
-    }
+
 
     @FXML
-    public void handelSignpClick(){
+    public void handelSignpClick(ActionEvent event){
 
         String uname=name.getText().trim();
         String uemail=email.getText().trim();
@@ -44,13 +47,22 @@ public class Signup_Controller {
         if (uemail!=null || uname!=null || upass!=null){
             status=User_Authentication.addUser(uname,uemail,upass);
             error.setText(status);
+            Parent root;
+            try {
+                root = FXMLLoader.load(getClass().getClassLoader().getResource("login_window/login.fxml"));
+                Stage stage = new Stage();
+                stage.setTitle("Login");
+
+                stage.setScene(new Scene(root, 500, 500));
+                stage.show();
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }else {
             error.setText("Please fill all the fields !");
         }
-
-
-
-
-
     }
 }
