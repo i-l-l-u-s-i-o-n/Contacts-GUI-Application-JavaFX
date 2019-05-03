@@ -4,6 +4,7 @@
     <root id="archive" name="Contacts Application(SceneBuilder JavaFx).jar">
       <element id="module-output" name="Contacts Application(SceneBuilder JavaFx)" />
       <element id="extracted-dir" path="$USER_HOME$/Desktop/h2/bin/h2-1.3.175.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/mysql-connector-java-8.0.15.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

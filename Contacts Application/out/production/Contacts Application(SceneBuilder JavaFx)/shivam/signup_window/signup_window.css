@@ -1,0 +1,12 @@
+.root{
+    -fx-background-image: url("image/start_page_image.png");
+}
+.button{
+    -fx-background-color: #0b0e4d;
+    -fx-padding: 5 5 5 5;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+#error{
+    -fx-font-size: 15px;
+}
