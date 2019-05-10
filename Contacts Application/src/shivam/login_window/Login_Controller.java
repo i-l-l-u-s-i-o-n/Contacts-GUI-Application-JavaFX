@@ -58,6 +58,7 @@ public class Login_Controller {
                 root = FXMLLoader.load(getClass().getResource("/shivam/contacts_window/mainWindow.fxml"));
                 Stage stage = new Stage();
                 stage.setTitle("Contacts Application");
+                stage.setResizable(false);
                 stage.setScene(new Scene(root, 1200, 700));
                 stage.show();
                 // Hide this current window (if this is what you want)

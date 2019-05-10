@@ -15,8 +15,10 @@ public class Main extends Application {
 //        scene.setUserAgentStylesheet("shivam/app.css");
 //        scene.getStylesheets().add(getClass().getResource("login_style.css").toExternalForm());
 
+        primaryStage.setResizable(false);
         primaryStage.setTitle("My Contatcs");
         primaryStage.setScene(scene);
+
 //        primaryStage.setResizable(false);
         primaryStage.show();
     }
