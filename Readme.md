@@ -47,7 +47,7 @@
 ![EDIT_CONTACT_WINDOW](https://user-images.githubusercontent.com/40165451/57517403-631f4c80-7334-11e9-8fba-125e931ddc48.png)
 
 
-* To delete a contatc, right click on it and then click Delete.
+* To delete a contact, right click on it and then click Delete.
 
 * To exit, just click on Contacts Menu and then click exit.
 
